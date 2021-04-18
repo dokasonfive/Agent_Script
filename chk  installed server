@@ -42,13 +42,14 @@ if [ -f /etc/passwd ]
 
 
 id puppet
-RC=
-4?
-if [ ${RC} -eq 0 ]
+RC=$?
+
+if [ $ {RC} -eq 0 ]
 then
 echo "user puppet check pass"
 else
 echo "User puppet check failed"
 fi
 #Kernel version
-kernelversion= `uname -r | awk -F " "
+kernelversion= `uname -r | awk -F "." `{print $1}'`
+if [ 
