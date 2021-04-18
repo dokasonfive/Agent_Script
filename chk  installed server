@@ -32,15 +32,25 @@ echo "file /etc/group missing'
 fi
 
 if [ -f /etc/passwd ]
+then
+echo "file /etc/passwd exists"
+else
+echo " file /etc/passwd missing"
+fi
 
-
-
-
-
-
-
-
-
+if [ -f /etc/httpd ]
+then
+echo "file /etc/httpd exists"
+else
+echo " file /etc/httpd missing"
+fi
+if [-f /etc/kubernetes ]
+then
+echo "file  /etc/kubernetes exists"
+else
+echo "file /etc/kubernetes missing"
+fi
+##check puppet
 id puppet
 RC=$?
 
@@ -52,4 +62,10 @@ echo "User puppet check failed"
 fi
 #Kernel version
 kernelversion= `uname -r | awk -F "." `{print $1}'`
-if [ 
+if [ $ {kernelversion} -ge 3 ]
+then
+echo "kernel version check pass"
+else
+echo "kernel version check failed"
+
+fi
