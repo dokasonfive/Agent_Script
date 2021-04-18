@@ -1,11 +1,54 @@
 #!/bin/bash
-#This script will check the new installed server
+#This script will check the new installed server,if the server meets some conditions
 #April 2021 by dokason five
 ## CPU Check
 CPU_N=`nproc`
+
+# the server have two cpu s?
+
 if [  ${CPU_N} -lt 2 ]
 then
 echo "CPU check FAILED"
 else
 echo "CPU check PASS"
 fi
+#for the total memory check ;should be atleast 2000
+MEM = free -m |grep Mem |awk '{print$2}'
+
+
+if [  ${MEM -lt 2 ]
+then
+echo "MEM check FAILED"
+else
+echo "MEM check PASS"
+fi
+#CHECK FILE EXIST
+
+if [ -f /etc/group ]
+then
+echo " file /etc/group exists"
+else
+echo "file /etc/group missing'
+fi
+
+if [ -f /etc/passwd ]
+
+
+
+
+
+
+
+
+
+id puppet
+RC=
+4?
+if [ ${RC} -eq 0 ]
+then
+echo "user puppet check pass"
+else
+echo "User puppet check failed"
+fi
+#Kernel version
+kernelversion= `uname -r | awk -F " "
