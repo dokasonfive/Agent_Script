@@ -1,3 +1,4 @@
 find /var/log -mtime +14 -type f -delete
 
 #This script deletes logs older than 14 days old
+exit
