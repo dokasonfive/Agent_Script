@@ -1,0 +1,11 @@
+#!/bin/bash
+#This script will check the new installed server
+#April 2021 by dokason five
+## CPU Check
+CPU_N=`nproc`
+if [  ${CPU_N} -lt 2 ]
+then
+echo "CPU check FAILED"
+else
+echo "CPU check PASS"
+fi
