@@ -1,5 +1,6 @@
 #!/bin/bash
-#This script will check the new installed server,if the server meets some conditions
+#This script will check the new installed server,
+April 2021 # By okeyuwadoka@gmail.com
 #April 2021 by dokason five
 ## CPU Check
 CPU_N=`nproc`
