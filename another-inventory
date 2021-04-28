@@ -35,7 +35,6 @@ echo -e "\n The DNS address is \n"
 cat /etc/resolv.conf|grep nameserver |head -1|awk  '{print$2}'
 sleep 4
 
-
 clear
 
 echo -e "\nAll opened ports listed below\n"
