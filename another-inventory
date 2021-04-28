@@ -24,8 +24,6 @@ sleep 4
 echo -e "\n The System has $(arch | awk -F_ '{print$2}') bits"
 sleep 4
 
-
-
 echo -e "\n The System Hostname is $HOSTNAME"
 sleep 4
 
