@@ -56,5 +56,4 @@ echo -e "\n The Mac address is\n"
 ifconfig enp0s3|grep  ether|awk  '{print$2}'
 sleep 5
 exit 0
-
--- INSERT --                                                                                       1,1           Top
+                                                                                       1,1           Top
